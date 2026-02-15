@@ -1,0 +1,49 @@
+# Nach Ausführen von Standardeinrichtung
+
+## Generell
+- acrobat Reader zuende installieren (auch .lnk auf Desktop entfernen)
+- Libreoffice-Icon-Schema anpassen
+- FF, TB: Profile rüberkopieren und in die Leiste legen
+- Benachrichtungston ausschalten
+- FF: DRM einschalten, Deutsche Rechtschreibprüfung: Dict installieren
+- Arbeitsflächen ausschalten
+- bing installieren
+- Timeshift einrichten
+- automatisches Update einschalten
+- Signal mal starten und Fehlermeldung weg
+- Nemo: Ordnererweiterungen anzeigen
+- TB: Menüleiste dauerhaft anzeigen
+
+## Nur bei Windows-Umzug
+- *.lnk und desktop.ini löschen
+
+## Nur FK
+- Thunderbird:
+  - Signaturen vom BR-Server einbinden
+  - QNote-Verzeichnis einrichten
+
+## Optional
+- Nextcloud-Client konfigurieren
+- Compose-Taste von Einfügen auf etwas anderes ändern
+- Meta+x als Fenstermaximierumschalter
+- Symbolansicht zu Detailansicht im Dateimanager
+- gigolo.conf.sh beim Nutzer ausführen
+
+# Nacharbeit mit Nutzer zu erledigen
+
+## Generell
+- USB-Gerät auswerfen
+- Passwort ändern
+- Backups machen zeigen
+- Fragen, ob Detailansicht im Dateimanager passt
+- Zeigen, wie man Programme an die Leiste anheftet
+- Whatsie, Messenger, Netflix, Spotify
+- Hotspot einschalten
+
+## Nur FK
+- RustDesk demonstrieren
+- VPN: PW eingeben
+
+## Optional
+- Compose-Taste und Maximierung zeigen
+- Gucken, ob Mediathekview startet, sonst Java-Versions-Check aus dem Programm löschen
