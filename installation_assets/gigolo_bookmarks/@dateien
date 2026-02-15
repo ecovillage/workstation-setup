@@ -1,0 +1,6 @@
+[dateien auf 192.168.1.127]
+host=192.168.1.127
+user=bewohner
+scheme=smb
+share=dateien
+autoconnect=1

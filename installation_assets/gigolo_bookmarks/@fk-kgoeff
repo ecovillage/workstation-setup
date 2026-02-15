@@ -1,0 +1,6 @@
+[fk-kgoeff auf 192.168.1.125]
+host=192.168.1.125
+user=fk-kgoeff
+scheme=smb
+share=fk-kgoeff
+autoconnect=1

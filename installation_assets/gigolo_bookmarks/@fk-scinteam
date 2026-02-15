@@ -1,0 +1,6 @@
+[fk-scinteam auf 192.168.1.125]
+host=192.168.1.125
+user=fk-scinteam
+scheme=smb
+share=fk-scinteam
+autoconnect=1

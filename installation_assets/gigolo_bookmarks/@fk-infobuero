@@ -1,0 +1,7 @@
+
+[fk-infobuero auf 192.168.1.125]
+host=192.168.1.125
+user=fk-infobuero
+scheme=smb
+share=fk-infobuero
+autoconnect=1
