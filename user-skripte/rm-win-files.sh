@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $HOME
+
 find . -name desktop.ini -exec rm {} \;
 find . -name *.lnk -exec rm {} \;
 find Downloads/ -name *.msi -exec rm {} \;

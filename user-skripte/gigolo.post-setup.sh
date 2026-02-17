@@ -2,12 +2,13 @@
 
 if ! command -v gigolo &> /dev/null; then sudo apt update && sudo apt install -y gigolo; fi
 
+REPO_DIR="$( cd -- "$(dirname "$0")"/.. >/dev/null 2>&1 ; pwd -P )"
 # Verzeichnis, das die Dateien enthält
-TEMPLATES_DIR="./installation_assets/gigolo_bookmarks"
+TEMPLATES_DIR="$REPO_DIR/installation_assets/gigolo_bookmarks"
 # Zieldatei
 GIGOLO_CONFIG_DIR="$HOME/.config/gigolo"
 mkdir -p $GIGOLO_CONFIG_DIR
-cp ./installation_assets/gigolo_config $GIGOLO_CONFIG_DIR/config
+cp $REPO_DIR/installation_assets/gigolo_config $GIGOLO_CONFIG_DIR/config
 
 cp ./installation_assets/gigolo.desktop $HOME/.config/autostart
 
