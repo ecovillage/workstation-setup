@@ -1,11 +1,13 @@
 # Nach Ausführen von Standardeinrichtung
 
 ## Generell
-- acrobat Reader zuende installieren (auch .lnk auf Desktop entfernen)
 - Libreoffice-Icon-Schema anpassen
 - FF, TB: Profile rüberkopieren und in die Leiste legen
 - Benachrichtungston ausschalten
-- FF: DRM einschalten, Deutsche Rechtschreibprüfung: Dict installieren
+- FF:
+  - DRM einschalten
+  - deutsche Oberfläche einschalten
+  - Deutsche Rechtschreibprüfung: Dict installieren
 - Arbeitsflächen ausschalten
 - bing installieren
 - Timeshift einrichten
