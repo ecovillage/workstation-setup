@@ -47,7 +47,7 @@ echo "…fertig."
 
 echo "Installiere Rustdesk-Client…"
 chmod u+x $REPO_DIR/installation_assets/rustdesklinuxclientinstall.sh
-# sudo $REPO_DIR/installation_assets/rustdesklinuxclientinstall.sh
+sudo $REPO_DIR/installation_assets/rustdesklinuxclientinstall.sh
 sudo rm "$(pwd)"/rustdesk*.deb # liegt nach der Installation noch rum
 echo "…fertig."
 
