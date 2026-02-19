@@ -11,6 +11,19 @@ fi
 
 REPO_DIR="$( cd -- "$(dirname "$0")"/.. >/dev/null 2>&1 ; pwd -P )"
 
+sudo pwd
+
+echo "Installiere Bing-Hintergründe…" # … während das Skript sich auf die nächste Interaktion mit dir vorbereitet
+if [ -d $HOME/.local/share/cinnamon/applets/bing-wallpaper@starcross.dev ]
+then
+  echo "… nicht mehr nötig."
+else
+  wget https://cinnamon-spices.linuxmint.com/files/applets/bing-wallpaper@starcross.dev.zip -O /tmp/bing.zip && \
+    unzip -q -d $HOME/.local/share/cinnamon/applets /tmp/bing.zip && \
+    cinnamon-settings applets & # Per Hand einschalten
+fi
+echo "…fertig."
+
 echo "Ersetze Standard-Quellen-Repos mit europäischen…"
 sudo sed -i 's|http://packages.linuxmint.com|https://ftp.fau.de/mint/packages|g' /etc/apt/sources.list.d/official-package-repositories.list
 sudo sed -i 's|http://archive.ubuntu.com/ubuntu|http://ftp.hosteurope.de/mirror/archive.ubuntu.com|g' /etc/apt/sources.list.d/official-package-repositories.list
@@ -100,14 +113,4 @@ sudo sed -i 's|Out ${HOME}/PDF$|Out ${HOME}/PDF-Drucke|' /etc/cups/cups-pdf.conf
 echo "…fertig."
 echo "CUPS neu starten, damit Änderungen des Druckverzeichnisses wirksam werden…"
 sudo service cups restart
-echo "…fertig."
-
-echo "Installiere Bing-Hintergründe…"
-if sudo [ -d $HOME/.local/share/cinnamon/applets/bing-wallpaper@starcross.dev ]
-then
-  echo "… nicht mehr nötig."
-else
-  wget https://cinnamon-spices.linuxmint.com/files/applets/bing-wallpaper@starcross.dev.zip -O /tmp/bing.zip && \
-  unzip -q -d $HOME/.local/share/cinnamon/applets /tmp/bing.zip
-fi
 echo "…fertig."
