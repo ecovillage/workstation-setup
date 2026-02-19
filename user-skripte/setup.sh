@@ -62,6 +62,7 @@ packages=(
   thunderbird-locale-de
   tree
   ttf-mscorefonts-installer
+  ubuntu-restricted-extras gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-good gstreamer1.0-libav
   vlc
 )
 
