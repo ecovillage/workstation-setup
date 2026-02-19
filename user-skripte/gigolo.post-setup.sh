@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if ! command -v gigolo &> /dev/null; then sudo apt update && sudo apt install -y gigolo; fi
 
 REPO_DIR="$( cd -- "$(dirname "$0")"/.. >/dev/null 2>&1 ; pwd -P )"
