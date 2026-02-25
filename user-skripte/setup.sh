@@ -44,18 +44,29 @@ echo "…fertig."
 # Snap in Linux Mint erlauben
 [ -f /etc/apt/preferences.d/nosnap.pref ] && sudo rm /etc/apt/preferences.d/nosnap.pref
 
-echo "Interaktive Software-Installationen zuerst anstoßen…"
-sudo apt --yes install ttf-mscorefonts-installer snapd || { echo 'Software install failed!'; exit 1; }
+echo "Software-Installationen mit Interaktion auf Kommandozeile zuerst abfrühstücken…"
 
-echo "… auch mit Snap …"
+packages_with_cmd_line_interactive_install=(
+  gigolo # schon mal die Konfig vorbereiten, während anderes installiert…
+  ttf-mscorefonts-installer
+)
+sudo apt --yes install  "${packages_with_cmd_line_interactive_install[@]}" || \
+  { echo 'Software install failed!'; exit 1; }
+  echo "…fertig."
+
+echo "Software-Installationen mit Interaktion über Fokus-nehmende Fenster abfrühstücken…"
+# Snap-Installation braucht eine Weile, aber man kann trotzdem schon mal was anderes machen,
+# denn sobald acrordrdc gestartet wird, springt einem das Acrobat-Installations-Fenster
+# ins Gesicht und man kann dort die nötigen Klicks zum Fortführen machen.
+sudo apt --yes install snapd || { echo 'Software install failed!'; exit 1; }
 sudo snap install acrordrdc
 # Make sure Acroread can access SMB shares and USB drives
 sudo snap connect acrordrdc:removable-media
 # … and print, if you are lucky:
 sudo snap connect acrordrdc:cups-control
-echo "…fertig."
 
 acrordrdc & # Das installiert sich mit interaktiver GUI, während der Rest installiert
+echo "…fertig."
 
 packages=(
   chromium
