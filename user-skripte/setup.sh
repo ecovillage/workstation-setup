@@ -92,6 +92,8 @@ packages=(
 
 echo 'Installiere Schriftart Titillium Web…'
 if fc-list | grep -iq "Titillium Web"; then
+  echo "…nicht mehr nötig."
+else
   fonts_file=installation_assets/titillium-web.zip
   [ -f $REPO_DIR/$fonts_file ] || { echo "ERROR: ./$fonts_file nicht gefunden. Schluss."; exit 1; }
 
@@ -104,8 +106,6 @@ if fc-list | grep -iq "Titillium Web"; then
   echo "Schriftarten-Cache neu aufbauen…"
   sudo fc-cache -f
   echo "…fertig."
-else
-  echo "…nicht mehr nötig."
 fi
 
 echo "Compose-Taste auf »Einfügen« legen…"
