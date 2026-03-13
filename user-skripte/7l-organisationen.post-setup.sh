@@ -9,6 +9,7 @@ if sudo [ -d $HOME/.config/mozilla ]
 then
   echo "…es besteht schon eine Konfig. Lassen wir mal lieber so."
 else
-  unzip -q -d $HOME/.config $REPO_DIR/installation_assets/firefox-profil.zip
+  wget -O /tmp/firefox-profil.zip http://192.168.1.127/firefox-profil.zip
+  unzip -q -d $HOME/.config /tmp/firefox-profil.zip
   echo "…fertig."
 fi
