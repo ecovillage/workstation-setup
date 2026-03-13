@@ -116,7 +116,7 @@ echo "…fertig"
 # abgefragt werden.)
 
 echo "Restliche Software installieren…"
-apt --yes install "${packages[@]}" || { echo 'Software install failed!'; exit 1; }
+sudo apt --yes install "${packages[@]}" || { echo 'Software install failed!'; exit 1; }
 echo "…fertig."
 
 echo "Speichere PDF-Drucke in Verzeichnis ~/PDF-Drucke…"
