@@ -125,3 +125,9 @@ echo "…fertig."
 echo "CUPS neu starten, damit Änderungen des Druckverzeichnisses wirksam werden…"
 sudo service cups restart
 echo "…fertig."
+
+# Automatische Kernel-Updates haben Theater gemacht mit plötzlich nicht
+# mehr funktionierendem WLAN und Scannern. Brauchen wir nicht mehr.
+echo "Sperre Aktualisierungen des laufenden Kernels bei künftigen Auto-Updates…"
+sudo apt-mark hold linux-image-$(uname -r)
+echo "…fertig."
