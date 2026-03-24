@@ -117,6 +117,7 @@ echo "…fertig"
 
 echo "Restliche Software installieren…"
 sudo apt --yes install "${packages[@]}" || { echo 'Software install failed!'; exit 1; }
+flatpak install org.gnome.DejaDup
 echo "…fertig."
 
 echo "Speichere PDF-Drucke in Verzeichnis ~/PDF-Drucke…"
