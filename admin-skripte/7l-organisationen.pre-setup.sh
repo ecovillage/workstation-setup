@@ -12,7 +12,7 @@ fi
 if [ $# -eq 1 ]
 then
   enduser=$1
-  encrypt=0
+  encrypt=false
 else # zwei Argumente
   if [[ $1 != '--encrypt' ]]
   then
@@ -22,7 +22,7 @@ else # zwei Argumente
   fi
 
   enduser=$2
-  encrypt=1
+  encrypt=true
 fi
 
 REPO_DIR="$( cd -- "$(dirname "$0")"/.. >/dev/null 2>&1 ; pwd -P )"
@@ -32,7 +32,7 @@ if [ -d /home/$enduser ]
 then
   echo "…nicht mehr nötig."
 else
-  if [ $encrypt ]
+  if [ "$encrypt" == true ]
   then
     sudo adduser --encrypt-home $enduser
   else
