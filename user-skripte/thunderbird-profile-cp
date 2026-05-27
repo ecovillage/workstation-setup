@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 2 ]; then
+  echo "Syntax: $0 Quellprofilverzeichnis Zielprofilverzeichnis"
+  echo "Bsp: $0 /tmp/q34p8xm4.default-esr ~/.thunderbird/hvyljmba.default-esr"
+
+  exit 1
+fi
+
+rsync -av --progress \
+--files-from=- "$1" "$2" <<'LIST'
+prefs.js
+handlers.json
+logins.json
+key4.db
+cert9.db
+abook.mab
+history.mab
+content-prefs.sqlite
+xulstore.json
+panacea.dat
+search.sqlite
+mail/
+ImapMail/
+Mail/
+virtmail/
+msgFilterRules.dat
+addressbook.sqlite
+gcontactsync.sqlite
+LIST
