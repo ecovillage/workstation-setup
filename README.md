@@ -3,9 +3,9 @@
 Fang an mit einer Linux-Installation, während der du zunächst ein Konto `fk-admin` oder `sige-admin` anlegst. Nimm die Passwörter aus der KeepassXC. Nach der Installation logg dich mit dem Nutzer ein und mach
 
 ```
-wget -O workstation-setup.zip https://github.com/ecovillage/workstation-setup/archive/master.zip && unzip workstation-setup.zip
+sudo apt install -y git && git clone https://github.com/ecovillage/workstation-setup.git ~/.workstation-setup
 ```
-um dieses Repo nach `~/workstation-setup-master` zu klonen. Jetzt kannst du die einzelnen Skripte ausführen, die zum Nutzungsprofil des Geräts passen:
+um dieses Repo nach `~/.workstation-setup` zu klonen. Jetzt kannst du die einzelnen Skripte ausführen, die zum Nutzungsprofil des Geräts passen:
 
 1. Leg einen (oder mehrere) neue Nutzer an:
 ```
@@ -19,8 +19,8 @@ Das Skript installiert außerdem die Fernwartungssoftware `Rustdesk`, die nur im
 
 2. Logg dich im neuen Nutzer ein und mach folgendes:
 ```
-cp -r /tmp/workstation-setup-master ~
-cd ~/workstation-setup-master
+cp -r /tmp/.workstation-setup ~
+cd ~/.workstation-setup
 ./user-skripte/setup.sh
 ```
 
