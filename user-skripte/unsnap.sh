@@ -11,7 +11,7 @@ echo "Stopping snapd…"
 sudo systemctl stop snapd
 echo "…fertig."
 echo "Deinstalliere snapd…"
-sudo apt purge snapd
+sudo apt purge -y snapd
 echo "…fertig."
 
 echo "Entferne snap-Verzeichnis in Homeverzeichnissen"
