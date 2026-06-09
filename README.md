@@ -32,7 +32,7 @@ Dieses Skript macht folgendes:
   - Nextcloud-Client
   - PDF-Arranger
   - Microsoft-Schriftarten (Installation interaktiv) und die Schriftart Titillium, die in den Veröffentlichungen des FK verwendet wird
-  - Acrobat Reader, weil manche, insbesondere Behörden-Dokumente nur damit les- bzw. ausfüllbar sind (Installation interaktiv, über Snap und Wine)
+  - Master PDF Editor (ersetzt Adobe Acrobat und kann auch komplizierte PDFs von Behörden lesen)
   - Cinnamon-Bing-Desklet für täglich wechselnde Schreibtischhintergründe (Installation interaktiv)
   - CopyQ (Macht eine Kopierspeicher-Historie verfügbar)
   - VLC
