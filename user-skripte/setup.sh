@@ -96,13 +96,13 @@ if fc-list | grep -iq "Titillium Web"; then
   echo "…nicht mehr nötig."
 else
   fonts_file="$REPO_DIR/installation_assets/titillium-web.zip"
-  [ -f $REPO_DIR/$fonts_file ] || {
-    echo "ERROR: ./$fonts_file nicht gefunden. Schluss."
+  [ -f $fonts_file ] || {
+    echo "ERROR: $fonts_file nicht gefunden. Schluss."
     exit 1
   }
 
   cd /usr/local/share/fonts && {
-    sudo unzip -o $REPO_DIR/$fonts_file
+    sudo unzip -o $fonts_file
     sudo rm OFL.txt
   } || {
     echo 'Schriftart Titillium Web konnte nicht installiert werden'
