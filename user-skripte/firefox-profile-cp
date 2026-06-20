@@ -1,0 +1,121 @@
+#!/bin/bash
+
+set -u
+
+if [ $# -ne 2 ]; then
+  echo "Syntax: $0 Quellprofilverzeichnis Zielprofilverzeichnis"
+  echo "Bsp: $0 ~/.mozilla/firefox/abc123.default ~/.mozilla/firefox/xyz456.default"
+  exit 1
+fi
+
+SRC="${1%/}"
+DST="${2%/}"
+
+if [ ! -d "$SRC" ]; then
+  echo "Fehler: Quellverzeichnis '$SRC' existiert nicht."
+  exit 1
+fi
+
+if [ ! -d "$DST" ]; then
+  echo "Fehler: Zielverzeichnis '$DST' existiert nicht."
+  exit 1
+fi
+
+copy_item() {
+  local item="$1"
+  local src_path="$SRC/$item"
+  local dst_path="$DST/$item"
+
+  if [ ! -e "$src_path" ]; then
+    echo "  [fehlt]   $item"
+    return 0
+  fi
+
+  if [ -d "$src_path" ]; then
+    echo "  [Ordner]  $item/"
+    rsync -a --delete "$src_path/" "$dst_path/"
+  else
+    echo "  [Datei]   $item"
+    mkdir -p "$(dirname "$dst_path")"
+    rsync -a "$src_path" "$dst_path"
+  fi
+}
+
+echo "Kopiere Firefox-Profil von '$SRC' nach '$DST' ..."
+echo
+
+# Benutzereinstellungen (about:config-Werte, die der Nutzer geändert hat)
+copy_item prefs.js
+
+# Startup-Überschreibungen für Einstellungen; wird bei jedem Start eingelesen und
+# überschreibt prefs.js – dient meist zur Härtung oder für Unternehmensrichtlinien
+copy_item user.js
+
+# Protokoll- und Dateitypzuordnungen (z. B. mailto:, PDF öffnen mit ...)
+copy_item handlers.json
+
+# Firefox Multi-Account Container (Tabs in isolierten Kontexten)
+copy_item containers.json
+
+# UI-Anpassungen: Symbolleistenlayout, Fensterpositionen
+copy_item xulstore.json
+
+# Suchmaschineneinstellungen und -reihenfolge
+copy_item search.json.mozlz4
+
+# Schlüsseldatenbank für den integrierten Passwortmanager (NSS)
+copy_item key4.db
+
+# Gespeicherte Passwörter (verschlüsselt mit key4.db)
+copy_item logins.json
+
+# Zertifikatsdatenbank (CA-Zertifikate, eigene Zertifikate, Ausnahmen)
+copy_item cert9.db
+
+# Lesezeichen und Browserhistorie (Places-Datenbank)
+copy_item places.sqlite
+
+# Favicons zu gespeicherten Lesezeichen und Verlaufseinträgen
+copy_item favicons.sqlite
+
+# Cookies aller besuchten Webseiten
+copy_item cookies.sqlite
+
+# Webseitenspezifische Einstellungen (z. B. Zoom-Stufe pro Domain)
+copy_item content-prefs.sqlite
+
+# Verlauf der Formularfelder (Autovervollständigung in Eingabefeldern)
+copy_item formhistory.sqlite
+
+# Webseitenberechtigungen (Kamera, Mikrofon, Benachrichtigungen, Geolocation ...)
+copy_item permissions.sqlite
+
+# HSTS-Daten (HTTP Strict Transport Security) und Preload-Zustände
+copy_item SiteSecurityServiceState.txt
+
+# Installierte Erweiterungen (XPI-Dateien und entpackte Ordner)
+copy_item extensions
+
+# Einstellungen einzelner Erweiterungen (vom Browser verwaltete Werte)
+copy_item extension-settings.json
+
+# Benutzergesteuerte Präferenzen der Erweiterungen
+copy_item extension-preferences.json
+
+# Metadaten zu installierten Erweiterungen (IDs, Versionen, Berechtigungen)
+copy_item addons.json
+
+# Gespeicherte Daten der Erweiterungen (z. B. uBlock-Filter, Cookie AutoDelete-Regeln)
+copy_item browser-extension-data
+
+# Benutzerdefiniertes CSS: userChrome.css (UI), userContent.css (Webseiten)
+copy_item chrome
+
+# Automatische Lesezeichen-Backups (JSON-Snapshots)
+copy_item bookmarkbackups
+
+# Geöffnete Tabs und Fenster der letzten Sitzung
+copy_item sessionstore.jsonlz4
+
+echo
+echo "Fertig."
