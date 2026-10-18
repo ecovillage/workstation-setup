@@ -1,0 +1,32 @@
+{
+    "head": {
+        "type": "header",
+        "description": "Hotspot connection (NetworkManager)"
+    },
+    "connection-name": {
+        "type": "entry",
+        "default": "Hotspot",
+        "description": "Connection name",
+        "tooltip": "Name of the NetworkManager connection that is switched on and off.",
+        "value": "Hotspot"
+    },
+    "head2": {
+        "type": "header",
+        "description": "Only used when creating the connection for the first time (if it does not exist yet)"
+    },
+    "ssid": {
+        "type": "entry",
+        "default": "",
+        "description": "SSID",
+        "tooltip": "Leave empty for the NetworkManager default (hostname).",
+        "value": ""
+    },
+    "password": {
+        "type": "entry",
+        "default": "",
+        "description": "Password (at least 8 characters)",
+        "tooltip": "Leave empty and NetworkManager will generate a random password.",
+        "value": ""
+    },
+    "__md5__": "388145e03a507a60a397c55b2b0ed2ad"
+}

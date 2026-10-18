@@ -9,7 +9,7 @@
   - deutsche Oberfläche einschalten
   - Deutsche Rechtschreibprüfung: Dict installieren
 - Arbeitsflächen ausschalten
-- bing einschalten
+- Moderately Advanced System Monitor konfigurieren
 - Timeshift einrichten
 - automatisches Update einschalten
 - Signal mal starten und Fehlermeldung weg
@@ -27,6 +27,7 @@
 - Thunderbird:
   - Signaturen vom BR-Server einbinden
   - QNote-Verzeichnis einrichten
+  - Quicktexte von https://siebenlinden.org/wp-content/uploads/templates.json einbinden
 
 ## Optional
 - Nextcloud-Client konfigurieren

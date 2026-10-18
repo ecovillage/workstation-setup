@@ -15,15 +15,39 @@ REPO_DIR="$(
 
 sudo pwd
 
+need_to_open_spices_window=0
 echo "Installiere Bing-Hintergründe…" # … während das Skript sich auf die nächste Interaktion mit dir vorbereitet
 if [ -d $HOME/.local/share/cinnamon/applets/bing-wallpaper@starcross.dev ]; then
   echo "… nicht mehr nötig."
 else
   wget https://cinnamon-spices.linuxmint.com/files/applets/bing-wallpaper@starcross.dev.zip -O /tmp/bing.zip &&
     unzip -q -d $HOME/.local/share/cinnamon/applets /tmp/bing.zip &&
-    cinnamon-settings applets & # Per Hand einschalten
+    need_to_open_spices_window=1
 fi
 echo "…fertig."
+
+echo "Installiere Simple Memory Monitor" # … während das Skript sich auf die nächste Interaktion mit dir vorbereitet
+if [ -d $HOME/.local/share/cinnamon/applets/sysmon@rohan ]; then
+  echo "… nicht mehr nötig."
+else
+  wget https://cinnamon-spices.linuxmint.com/files/applets/sysmon@rohan -O /tmp/sysmon.zip &&
+    unzip -q -d $HOME/.local/share/cinnamon/applets /tmp/sysmon.zip &&
+    need_to_open_spices_window=1
+fi
+echo "…fertig."
+
+echo "Installiere WiFi-Hotspot-Toggle" # … während das Skript sich auf die nächste Interaktion mit dir vorbereitet
+if [ -d $HOME/.local/share/cinnamon/applets/wifi-hotspot-toggle@martin1784 ]; then
+  echo "… nicht mehr nötig."
+else
+  cp -r $REPO_DIR/installation_assets/wifi-hotspot-toggle@martin1784 $HOME/.local/share/cinnamon/applets
+  need_to_open_spices_window=1
+fi
+echo "…fertig."
+
+if [[ $need_to_open_spices_window == 1 ]]; then
+  cinnamon-settings applets & # Per Hand einschalten
+fi
 
 echo "Ersetze Standard-Quellen-Repos mit europäischen…"
 sudo sed -i 's|http://packages.linuxmint.com|https://ftp.fau.de/mint/packages|g' /etc/apt/sources.list.d/official-package-repositories.list
