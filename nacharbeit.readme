@@ -1,24 +1,23 @@
 # Nach Ausführen von Standardeinrichtung
 
 ## Generell
-- Libreoffice-Icon-Schema anpassen
-- FF, TB: Profile rüberkopieren und in die Leiste legen
-- Benachrichtungston ausschalten
-- FF:
-  - DRM einschalten
-  - deutsche Oberfläche einschalten
-  - Deutsche Rechtschreibprüfung: Dict installieren
-- Arbeitsflächen ausschalten
-- Moderately Advanced System Monitor konfigurieren
 - Timeshift einrichten
 - automatisches Update einschalten
+- Libreoffice-Icon-Schema anpassen
+- Benachrichtungston ausschalten
+- Arbeitsflächen ausschalten
 - Signal mal starten und Fehlermeldung weg
 - Nemo: Ordnererweiterungen anzeigen
-- TB: Menüleiste dauerhaft anzeigen
 - Benachrichtungen im Nextcloud-Client ausschalten
 - Im Master PDF Editor die Formular-Werkzeugleiste ausschalten
 - VPN einrichten?
 - Terminalserver einrichten?
+- FF, TB: Profile rüberkopieren und in die Leiste legen
+- FF:
+  - DRM einschalten
+  - deutsche Oberfläche einschalten
+  - Deutsche Rechtschreibprüfung: Dict installieren
+- TB: Menüleiste dauerhaft anzeigen
 
 ## Nur bei Windows-Umzug
 - *.lnk und desktop.ini löschen
