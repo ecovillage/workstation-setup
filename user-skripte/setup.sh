@@ -27,10 +27,10 @@ fi
 echo "…fertig."
 
 echo "Installiere Simple Memory Monitor" # … während das Skript sich auf die nächste Interaktion mit dir vorbereitet
-if [ -d $HOME/.local/share/cinnamon/applets/sysmon@rohan ]; then
+if [ -d $HOME/.local/share/cinnamon/applets/mem-monitor-text@datanom.net ]; then
   echo "… nicht mehr nötig."
 else
-  wget https://cinnamon-spices.linuxmint.com/files/applets/sysmon@rohan -O /tmp/sysmon.zip &&
+  wget https://cinnamon-spices.linuxmint.com/files/applets/mem-monitor-text@datanom.net.zip -O /tmp/sysmon.zip &&
     unzip -q -d $HOME/.local/share/cinnamon/applets /tmp/sysmon.zip &&
     need_to_open_spices_window=1
 fi
