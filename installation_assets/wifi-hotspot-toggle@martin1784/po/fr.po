@@ -1,0 +1,71 @@
+# French translation for wifi-hotspot-toggle@martin1784
+msgid ""
+msgstr ""
+"Project-Id-Version: wifi-hotspot-toggle@martin1784\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Show hotspot password"
+msgstr "Afficher le mot de passe du point d’accès"
+
+msgid "Edit network connections"
+msgstr "Modifier les connexions réseau"
+
+msgid "Querying NetworkManager…"
+msgstr "Interrogation de NetworkManager…"
+
+msgid "NetworkManager not reachable"
+msgstr "NetworkManager injoignable"
+
+msgid "SSID: %s"
+msgstr "SSID : %s"
+
+msgid "Password: %s"
+msgstr "Mot de passe : %s"
+
+msgid "Hotspot on"
+msgstr "Point d’accès activé"
+
+msgid "Hotspot off"
+msgstr "Point d’accès désactivé"
+
+msgid "Switching hotspot…"
+msgstr "Commutation du point d’accès…"
+
+msgid "Click to switch off"
+msgstr "Cliquer pour désactiver"
+
+msgid "Click to switch on"
+msgstr "Cliquer pour activer"
+
+msgid "Unknown error"
+msgstr "Erreur inconnue"
+
+msgid "Connection not found"
+msgstr "Connexion introuvable"
+
+msgid "Hotspot connection (NetworkManager)"
+msgstr "Connexion du point d’accès (NetworkManager)"
+
+msgid "Connection name"
+msgstr "Nom de la connexion"
+
+msgid "Name of the NetworkManager connection that is switched on and off."
+msgstr "Nom de la connexion NetworkManager qui est activée et désactivée."
+
+msgid "Only used when creating the connection for the first time (if it does not exist yet)"
+msgstr "Utilisé uniquement à la première création de la connexion (si elle n’existe pas encore)"
+
+msgid "Leave empty for the NetworkManager default (hostname)."
+msgstr "Laisser vide pour la valeur par défaut de NetworkManager (nom d’hôte)."
+
+msgid "Password (at least 8 characters)"
+msgstr "Mot de passe (au moins 8 caractères)"
+
+msgid "Leave empty and NetworkManager will generate a random password."
+msgstr "Laisser vide : NetworkManager générera un mot de passe aléatoire."
+
+msgid "Switches the wifi hotspot on and off with a click and shows its state."
+msgstr "Active et désactive le point d’accès Wi-Fi d’un clic et affiche son état."

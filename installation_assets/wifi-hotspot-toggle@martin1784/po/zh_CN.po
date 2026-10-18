@@ -1,0 +1,71 @@
+# Chinese (Simplified) translation for wifi-hotspot-toggle@martin1784
+msgid ""
+msgstr ""
+"Project-Id-Version: wifi-hotspot-toggle@martin1784\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Show hotspot password"
+msgstr "显示热点密码"
+
+msgid "Edit network connections"
+msgstr "编辑网络连接"
+
+msgid "Querying NetworkManager…"
+msgstr "正在查询 NetworkManager…"
+
+msgid "NetworkManager not reachable"
+msgstr "无法连接到 NetworkManager"
+
+msgid "SSID: %s"
+msgstr "SSID：%s"
+
+msgid "Password: %s"
+msgstr "密码：%s"
+
+msgid "Hotspot on"
+msgstr "热点已开启"
+
+msgid "Hotspot off"
+msgstr "热点已关闭"
+
+msgid "Switching hotspot…"
+msgstr "正在切换热点…"
+
+msgid "Click to switch off"
+msgstr "点击关闭"
+
+msgid "Click to switch on"
+msgstr "点击开启"
+
+msgid "Unknown error"
+msgstr "未知错误"
+
+msgid "Connection not found"
+msgstr "未找到连接"
+
+msgid "Hotspot connection (NetworkManager)"
+msgstr "热点连接（NetworkManager）"
+
+msgid "Connection name"
+msgstr "连接名称"
+
+msgid "Name of the NetworkManager connection that is switched on and off."
+msgstr "要开启和关闭的 NetworkManager 连接的名称。"
+
+msgid "Only used when creating the connection for the first time (if it does not exist yet)"
+msgstr "仅在首次创建连接时使用（如果连接尚不存在）"
+
+msgid "Leave empty for the NetworkManager default (hostname)."
+msgstr "留空则使用 NetworkManager 默认值（主机名）。"
+
+msgid "Password (at least 8 characters)"
+msgstr "密码（至少 8 个字符）"
+
+msgid "Leave empty and NetworkManager will generate a random password."
+msgstr "留空则由 NetworkManager 生成随机密码。"
+
+msgid "Switches the wifi hotspot on and off with a click and shows its state."
+msgstr "一键开启或关闭 Wi-Fi 热点，并显示其状态。"

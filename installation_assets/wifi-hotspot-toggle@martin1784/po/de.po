@@ -1,0 +1,71 @@
+# German translation for wifi-hotspot-toggle@martin1784
+msgid ""
+msgstr ""
+"Project-Id-Version: wifi-hotspot-toggle@martin1784\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Show hotspot password"
+msgstr "Hotspot-Passwort anzeigen"
+
+msgid "Edit network connections"
+msgstr "Netzwerkverbindungen bearbeiten"
+
+msgid "Querying NetworkManager…"
+msgstr "NetworkManager wird abgefragt …"
+
+msgid "NetworkManager not reachable"
+msgstr "NetworkManager nicht erreichbar"
+
+msgid "SSID: %s"
+msgstr "SSID: %s"
+
+msgid "Password: %s"
+msgstr "Passwort: %s"
+
+msgid "Hotspot on"
+msgstr "Hotspot an"
+
+msgid "Hotspot off"
+msgstr "Hotspot aus"
+
+msgid "Switching hotspot…"
+msgstr "Hotspot wird umgeschaltet …"
+
+msgid "Click to switch off"
+msgstr "Klicken zum Ausschalten"
+
+msgid "Click to switch on"
+msgstr "Klicken zum Einschalten"
+
+msgid "Unknown error"
+msgstr "Unbekannter Fehler"
+
+msgid "Connection not found"
+msgstr "Verbindung nicht gefunden"
+
+msgid "Hotspot connection (NetworkManager)"
+msgstr "Hotspot-Verbindung (NetworkManager)"
+
+msgid "Connection name"
+msgstr "Name der Verbindung"
+
+msgid "Name of the NetworkManager connection that is switched on and off."
+msgstr "Name der NetworkManager-Verbindung, die ein- und ausgeschaltet wird."
+
+msgid "Only used when creating the connection for the first time (if it does not exist yet)"
+msgstr "Nur für das erstmalige Anlegen (falls die Verbindung noch nicht existiert)"
+
+msgid "Leave empty for the NetworkManager default (hostname)."
+msgstr "Leer lassen für den NetworkManager-Standard (Hostname)."
+
+msgid "Password (at least 8 characters)"
+msgstr "Passwort (mind. 8 Zeichen)"
+
+msgid "Leave empty and NetworkManager will generate a random password."
+msgstr "Leer lassen, dann erzeugt NetworkManager ein Zufallspasswort."
+
+msgid "Switches the wifi hotspot on and off with a click and shows its state."
+msgstr "Schaltet den WLAN-Hotspot per Klick ein und aus und zeigt seinen Zustand an."

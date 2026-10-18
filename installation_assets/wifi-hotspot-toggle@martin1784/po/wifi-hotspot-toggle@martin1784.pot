@@ -1,0 +1,71 @@
+# Template translation for wifi-hotspot-toggle@martin1784
+msgid ""
+msgstr ""
+"Project-Id-Version: wifi-hotspot-toggle@martin1784\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Show hotspot password"
+msgstr ""
+
+msgid "Edit network connections"
+msgstr ""
+
+msgid "Querying NetworkManager…"
+msgstr ""
+
+msgid "NetworkManager not reachable"
+msgstr ""
+
+msgid "SSID: %s"
+msgstr ""
+
+msgid "Password: %s"
+msgstr ""
+
+msgid "Hotspot on"
+msgstr ""
+
+msgid "Hotspot off"
+msgstr ""
+
+msgid "Switching hotspot…"
+msgstr ""
+
+msgid "Click to switch off"
+msgstr ""
+
+msgid "Click to switch on"
+msgstr ""
+
+msgid "Unknown error"
+msgstr ""
+
+msgid "Connection not found"
+msgstr ""
+
+msgid "Hotspot connection (NetworkManager)"
+msgstr ""
+
+msgid "Connection name"
+msgstr ""
+
+msgid "Name of the NetworkManager connection that is switched on and off."
+msgstr ""
+
+msgid "Only used when creating the connection for the first time (if it does not exist yet)"
+msgstr ""
+
+msgid "Leave empty for the NetworkManager default (hostname)."
+msgstr ""
+
+msgid "Password (at least 8 characters)"
+msgstr ""
+
+msgid "Leave empty and NetworkManager will generate a random password."
+msgstr ""
+
+msgid "Switches the wifi hotspot on and off with a click and shows its state."
+msgstr ""

@@ -1,0 +1,71 @@
+# Russian translation for wifi-hotspot-toggle@martin1784
+msgid ""
+msgstr ""
+"Project-Id-Version: wifi-hotspot-toggle@martin1784\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Show hotspot password"
+msgstr "Показать пароль точки доступа"
+
+msgid "Edit network connections"
+msgstr "Изменить сетевые подключения"
+
+msgid "Querying NetworkManager…"
+msgstr "Опрос NetworkManager…"
+
+msgid "NetworkManager not reachable"
+msgstr "NetworkManager недоступен"
+
+msgid "SSID: %s"
+msgstr "SSID: %s"
+
+msgid "Password: %s"
+msgstr "Пароль: %s"
+
+msgid "Hotspot on"
+msgstr "Точка доступа включена"
+
+msgid "Hotspot off"
+msgstr "Точка доступа выключена"
+
+msgid "Switching hotspot…"
+msgstr "Переключение точки доступа…"
+
+msgid "Click to switch off"
+msgstr "Щёлкните, чтобы выключить"
+
+msgid "Click to switch on"
+msgstr "Щёлкните, чтобы включить"
+
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+msgid "Connection not found"
+msgstr "Подключение не найдено"
+
+msgid "Hotspot connection (NetworkManager)"
+msgstr "Подключение точки доступа (NetworkManager)"
+
+msgid "Connection name"
+msgstr "Имя подключения"
+
+msgid "Name of the NetworkManager connection that is switched on and off."
+msgstr "Имя подключения NetworkManager, которое включается и выключается."
+
+msgid "Only used when creating the connection for the first time (if it does not exist yet)"
+msgstr "Используется только при первом создании подключения (если оно ещё не существует)"
+
+msgid "Leave empty for the NetworkManager default (hostname)."
+msgstr "Оставьте пустым, чтобы использовать значение NetworkManager по умолчанию (имя узла)."
+
+msgid "Password (at least 8 characters)"
+msgstr "Пароль (не менее 8 символов)"
+
+msgid "Leave empty and NetworkManager will generate a random password."
+msgstr "Оставьте пустым, и NetworkManager создаст случайный пароль."
+
+msgid "Switches the wifi hotspot on and off with a click and shows its state."
+msgstr "Включает и выключает точку доступа Wi-Fi одним щелчком и показывает её состояние."

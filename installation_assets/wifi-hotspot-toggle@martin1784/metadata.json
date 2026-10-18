@@ -1,0 +1,7 @@
+{
+    "uuid": "wifi-hotspot-toggle@martin1784",
+    "name": "Wifi-Hotspot-Toggle",
+    "description": "Switches the wifi hotspot on and off with a click and shows its state.",
+    "version": "1.0",
+    "max-instances": 1
+}
