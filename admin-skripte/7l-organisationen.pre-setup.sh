@@ -2,20 +2,17 @@
 
 set -e
 
-if [[ $# -ne 1 && $# -ne 2 ]]
-then
+if [[ $# -ne 1 && $# -ne 2 ]]; then
   echo "Syntax: $0 [--encrypt] ENDUSERNAME"
 
   exit 1
 fi
 
-if [ $# -eq 1 ]
-then
+if [ $# -eq 1 ]; then
   enduser=$1
   encrypt=false
 else # zwei Argumente
-  if [[ $1 != '--encrypt' ]]
-  then
+  if [[ $1 != '--encrypt' ]]; then
     echo 'Bei zwei Argumenten muss das erste --encrypt sein.'
 
     exit 1
@@ -25,15 +22,16 @@ else # zwei Argumente
   encrypt=true
 fi
 
-REPO_DIR="$( cd -- "$(dirname "$0")"/.. >/dev/null 2>&1 ; pwd -P )"
+REPO_DIR="$(
+  cd -- "$(dirname "$0")"/.. >/dev/null 2>&1
+  pwd -P
+)"
 
 echo "Erstelle Nutzer $enduser…"
-if [ -d /home/$enduser ]
-then
+if [ -d /home/$enduser ]; then
   echo "…nicht mehr nötig."
 else
-  if [ "$encrypt" == true ]
-  then
+  if [ "$encrypt" == true ]; then
     sudo adduser --encrypt-home $enduser
   else
     sudo adduser $enduser
@@ -42,7 +40,7 @@ else
 fi
 
 echo "Gebe $enduser ähnliche Gruppen wie $USER…"
-sudo usermod -a -G $(id -G | tr ' ' '\n' | grep -v "^$(id -g)$" | tr '\n' ','| sed 's/,$//') $enduser
+sudo usermod -a -G $(id -G | tr ' ' '\n' | grep -v "^$(id -g)$" | tr '\n' ',' | sed 's/,$//') $enduser
 echo "…fertig."
 
 echo "Installiere Rustdesk-Client…"
