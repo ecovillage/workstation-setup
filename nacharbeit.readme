@@ -12,9 +12,9 @@
 - Im Master PDF Editor die Formular-Werkzeugleiste ausschalten
 - VPN einrichten?
 - Terminalserver einrichten?
-- FF, TB: Profile rüberkopieren und in die Leiste legen
+- RustDesk-ID dokumentieren
+- FF, TB: Profile rüberkopieren und in die Leiste legen (user_skripte/provision_firefox.sh ausführen)
 - FF:
-  - DRM einschalten
   - deutsche Oberfläche einschalten
   - Deutsche Rechtschreibprüfung: Dict installieren
 - TB: Menüleiste dauerhaft anzeigen
